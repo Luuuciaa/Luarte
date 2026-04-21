@@ -1,0 +1,331 @@
+/*Elimina los margenes y paddings que agrega el navegador por defecto*/
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+   padding-top: 0;
+
+    
+}
+
+h1,
+h2 {
+    margin-top: 40px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 50px;
+}
+
+/*MENU DE NAVEGACIÓN*/
+/* Barra de navegación */
+.navbar {
+    background-color: #F291D0;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    justify-content: space-between;
+    padding: 10px;
+    /*deja el menu fijo*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* para que quede encima del contenido */
+    z-index: 1000;
+}
+
+/* Lista del menú */
+.navbar ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+
+}
+
+/* Elementos del menú */
+.navbar li {
+    margin: 5px 15px;
+    /*Espacio entre los elementos*/
+
+}
+
+
+/* Enlaces del menú */
+.navbar a {
+    /*Elimina lo subrayado*/
+    text-decoration: none;
+    color: white !important;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 20px;
+    padding: 6px 16px;
+
+}
+
+.navbar a:hover {
+    background-color: #d448a3;
+
+}
+
+/*Menú desplegable */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #F291D0;
+    min-width: 160px;
+    box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 1;
+    top: 100%;
+    /* lo coloca justo debajo del botón */
+    /*Para que se vean en 2 columnas*/
+    grid-template-columns: 1fr 1fr;
+
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+
+
+}
+
+.dropdown-content a:hover {
+    background-color: #d448a3;
+}
+
+.dropdown:hover .dropdown-content {
+    display: grid;
+}
+
+/*MENÚ HAMBURGUESA*/
+.nav_toggle {
+    display: none;
+    /*Oculta el botón hamburguesa en pantallas grandes*/
+}
+
+/*DISPOSITIVOS PEQUEÑOS*/
+@media (max-width: 600px) {
+    #logo {
+        width: 80px;
+        height: 90px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar li {
+        width: 100%;
+    }
+
+    .navbar a {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .navbar ul {
+        width: 100%;
+        position: fixed;
+        top: 70px;
+        left: 0;
+        background-color: #F291D0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+
+    }
+
+    .navbar ul.open {
+        transform: translateX(0);
+    }
+
+    .nav_toggle {
+        display: flex !important;
+        /*muestra las líneas*/
+        flex-direction: column;
+        margin: 15px;
+        z-index: 11;
+        /*lo pone por encima del menú*/
+        cursor: pointer;
+    }
+
+    .nav_toggle span {
+        width: 30px;
+        height: 4px;
+        background-color: black;
+        margin-bottom: 5px;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+
+    }
+
+    /*TRANSFORMA EL ÍCONO DE HAMBURGUESA EN UNA CRUZ Y SE ACTIVA CON LA CLASE .ACTIVE*/
+    /* Rota la primera línea 45 grados y la mueve un poco, formando la primera parte de la cruz*/
+    .nav_toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    /*Oculta la línea del medio. Así solo quedan las líneas de arriba y abajo, que cruzadas forman la X*/
+    .nav_toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    /*Rota la tercera línea en dirección opuesta, formando la otra parte de la X*/
+    .nav_toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+}
+
+#logo {
+    width: 110px;
+    height: 50px;
+
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nombre {
+    margin-top: 5px;
+}
+
+/*PÁGINA DE INICIO*/
+
+/*PRESENTACIÓN*/
+
+.presentacion {
+    display: flex;
+    align-items: center;      /* centra verticalmente */
+    justify-content: center; /*centra el contenido*/
+    padding: 100px;
+    gap: 60px;                /* espacio entre texto e imagen */
+    text-align: center;
+    padding: 30px 100px; /* 30 arriba/abajo - 100 lados */
+}
+
+.presentacion img {
+    width: 400px;
+    height: auto;
+    border-radius: 10px;    
+    margin-top: 20px;  
+}
+
+
+/* TITULO PRINCIPAL */
+.presentacion h1 {
+    font-size: 55px;
+    margin-bottom: 5px;
+
+}
+
+/* SUBTITULO */
+.subtitulo {
+    margin-top: 5px;
+    font-size: 35px;
+}
+
+/*TEXTO*/
+.texto-decorativo {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    margin: 15px 0 25px;
+}
+
+/*BOTÓN*/
+.presentacion a {
+    display: inline-block;
+    background-color: #d364ac;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    padding: 5px 30px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+/* EFECTO HOVER */
+.presentacion a:hover {
+    background-color: #b94f93;
+    transform: scale(1.05);
+}
+
+/*LA HISTORIA DE LUARTE*/
+.historia h1{
+    font-size: 55px;
+}
+
+
+
+
+
+
+
+/*PRODUCTOS PRESENTACIÓN*/
+.productos-presentacion {
+    font-size: 30px;
+    margin-bottom: 10px;
+    border-radius: 50px;
+}
+
+.card-producto {
+    background-color: #e7afd4;
+    border-radius: 15px;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+
+}
+
+.card-producto img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card-producto p {
+    margin-top: 8px;
+    font-weight: bold;
+
+}
+
+.card-producto:hover {
+    transform: scale(1.05);
+}
+
+/*ICONO DE WHATSAPP*/
+.whatsapp-button {
+    position: fixed;
+    /*Se mantiene fijo en la pantalla y cuando se desplaza*/
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+    /*Asegura que este por encima de otros elementos*/
+    height: 60px;
+    width: 60px;
+}
