@@ -19,6 +19,13 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!--Tipografías-->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
@@ -38,7 +45,7 @@
                         <li><a href="#">Productos</a></li>
                         <div class="dropdown-content">
                             <li><a href="#">Monjes</a></li>
-                            <li><a href="#">Budas</a></li>
+                            <li><a href="/productos/budas.html">Budas</a></li>
                             <li><a href="#">Animales</a></li>
                             <li><a href="#">Personajes</a></li>
                             <li><a href="#">Porta sahumerios</a></li>
@@ -57,9 +64,9 @@
                         </div>
                     </div>
 
-                    <li><a>Contacto</a></li>
-                    <li><a href="/Secciones/nosotros.html">Nosotros</a></li>
-                    <li><a>Preguntas Frecuentes</a></li>
+                    <li><a href="/secciones/contacto.html">Contacto</a></li>
+                    <li><a href="/secciones/nosotros.html">Nosotros</a></li>
+                    <li><a href="/secciones/preguntasFrecuentes.html">Preguntas Frecuentes</a></li>
                 </ul>
                 <!--MENÚ HAMBURGUESA-->
                 <div class="nav_toggle" id="_toggle">
@@ -78,10 +85,9 @@
                 <h1>Artesanías en yeso</h1>
                 <h2 class="subtitulo">Pintadas a mano</h2>
                 <h2 class="texto-decorativo">Para decorar tu hogar</h2>
-                <a href="#productos"> Ver Productos > </a>
             </div>
 
-             <!--CARRUSEL DE FOTOS-->
+            <!--CARRUSEL DE FOTOS-->
             <div id="carouselExampleIndicators" class="carousel slide">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
@@ -112,7 +118,6 @@
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
                 </button>
-            </div>
             </div>
         </section>
 
@@ -245,7 +250,7 @@
             </div>
         </section>
         <!-- Botón de WhatsApp -->
-        <a href="https://wa.me/5492257409774" class="whatsapp-float" target="_blank">
+        <a href="https://wa.me/5492257409774" class="whatsapp-float" target="_blank" title="Ir a WhatsApp">
             <img src="img/Icono-WhatsApp.png" alt="WhatsApp" class="whatsapp-button">
 
         </a>
@@ -287,16 +292,18 @@
                 </ul>
             </section>
 
-            <!--MEDIOS DE PAGO-->
+             <!--MEDIOS DE PAGO-->
             <section class="mediosdepago">
                 <h3>Medios de Pago</h3>
                 <ul>
                     <li>
-                        <img src="" alt="Transferencia">
+                        <i class='bx bx-credit-card'></i> 
+                        <span>Transferencia</span>
                     </li>
 
                     <li>
-                        <img src="" alt="Efectivo">
+                        <i class='bx bx-money'></i> 
+                        <span>Efectivo</span>
                     </li>
                 </ul>
 

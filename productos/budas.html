@@ -14,16 +14,20 @@
 
     <!-- Estilos -->
     <link rel="stylesheet" href="/estilos/estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
     <!--Tipografías-->
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
-
 </head>
 
-<body>
+<body data-categoria="buda">
     <header>
 
         <!--MENÚ DE NAVEGACIÓN-->
@@ -73,51 +77,29 @@
         </nav>
     </header>
 
+
     <main>
-        <section class="inicio">
+        <section class="productos">
+            <h2>Budas</h2>
 
-            <h1>La historia de Luarte</h1>
-            <p>
-                Comencé mi emprendimiento el 26 de septiembre de 2021, participando en una feria que se realizó en el
-                vivero Cosme Argerich. Fue una experiencia muy positiva, ya que mis productos fueron muy bien recibidos
-                por el público. Con tan solo 17 años di el primer paso para crear mi propio emprendimiento de artesanías
-                en yeso.
-                A partir de ese momento continué creciendo y sumando nuevas experiencias. Durante la temporada 2022
-                comencé a trabajar en la Plaza de las Banderas, en la feria Captus, donde tuve la oportunidad de seguir
-                mostrando mis productos y conectando con muchas personas que valoran el trabajo artesanal.
-                Con el paso de los años fui incorporando nuevas piezas, explorando diferentes estilos y mejorando mis
-                técnicas de pintura para lograr mejores terminaciones en cada figura. Cada producto está realizado con
-                dedicación y cuidado en los detalles, buscando siempre ofrecer algo único y especial.
-                Luarte nació como un pequeño proyecto personal y con el tiempo se fue transformando en un espacio donde
-                puedo expresar mi creatividad y compartir mi trabajo con otras personas. Me motiva seguir aprendiendo,
-                creciendo y creando nuevas piezas que puedan decorar hogares, regalarse en ocasiones especiales o
-                simplemente transmitir alegría a quienes las eligen.
-                Mi objetivo siempre es que cada cliente se lleve no solo un producto, sino también una experiencia
-                positiva, brindando una atención cercana y productos hechos con compromiso, dedicación y amor por lo
-                artesanal.
-                Luarte continúa creciendo con nuevas piezas, técnicas de pintura
-                y el objetivo de ofrecer productos artesanales únicos para
-                decorar los hogares.
+            <div class="contenedor-productos" id="contenedor-productos">
 
-            </p>
-            <img src="/img/puesto 2.jpg">
+            </div>
 
-
-
-            <!-- Botón de WhatsApp -->
-            <a href="https://wa.me/5492257409774" class="whatsapp-float" target="_blank">
-                <img src="img/Icono-WhatsApp.png" alt="WhatsApp" class="whatsapp-button">
-
-            </a>
         </section>
 
+        <script src="/javascript/productos.js"></script>
+
         <!-- Botón de WhatsApp -->
-        <a href="https://wa.me/5492257409774" class="whatsapp-float" target="_blank" title="Ir a WhatsApp">
+        <a href="https://wa.me/5492257409774" class="whatsapp-float" target="_blank" title="Ir a WhatsApp ">
             <img src="/img/Icono-WhatsApp.png" alt="WhatsApp" class="whatsapp-button">
 
         </a>
 
+
     </main>
+
+
     <!--PIE DE PÁGINA-->
     <footer>
         <div class="footer">
@@ -159,12 +141,12 @@
                 <h3>Medios de Pago</h3>
                 <ul>
                     <li>
-                        <i class='bx bx-credit-card'></i>
+                        <i class='bx bx-credit-card'></i> 
                         <span>Transferencia</span>
                     </li>
 
                     <li>
-                        <i class='bx bx-money'></i>
+                        <i class='bx bx-money'></i> 
                         <span>Efectivo</span>
                     </li>
                 </ul>
@@ -174,6 +156,9 @@
         <p>© 2026 Luarte - Hecho con amor en Argentina - Todos los derechos reservados</p>
     </footer>
     <script src="/javascript/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
